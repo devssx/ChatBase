@@ -1,0 +1,225 @@
+/* Colors */
+:root {
+  --chat-color-header: #000;
+  --chat-color-background-header: #eceff1;
+
+  --chat-color-background-1: #fff;
+  --chat-color-background-2: #eceff1;
+  --chat-color-light: #e6e6e6;
+  --chat-color-line: #999;
+  --chat-color-close: red;
+
+  --chat-color-background-message-you: #00b0ff;
+  --chat-color-text-message-you: #fff;
+  
+  --chat-color-background-message-me: #eceff1;
+  --chat-color-text-message-me: #1a1a1a;
+
+  --chat-color-input: black;
+  --chat-color-background-input: #eceff1;
+
+  --chat-color-button: #0aa2ec;
+}
+
+
+/* Chat Window */
+.chat-window {
+  font-family: Arial, sans-serif;
+  width: 400px;
+  height: 600px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid var(--chat-color-light);
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--chat-color-background-1);
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: var(--chat-color-background-header);
+  color: var(--chat-color-header);
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--chat-color-light);
+}
+
+.chat-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  margin-bottom: 80px;
+}
+
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 10px;
+  background-color: var(--chat-color-button);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--chat-color-close);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* messages */
+.bubble {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 8px;
+  padding: 13px 14px;
+  vertical-align: top;
+  border-radius: 5px;
+}
+
+.bubble:before {
+  position: absolute;
+  top: 19px;
+  display: block;
+  width: 8px;
+  height: 6px;
+  content: " ";
+  transform: rotate(29deg) skew(-35deg);
+}
+
+.bubble.you {
+  float: left;
+  color: var(--chat-color-text-message-you);
+  background-color: var(--chat-color-background-message-you);
+  align-self: flex-start;
+  -webkit-animation-name: slideFromLeft;
+  animation-name: slideFromLeft;
+}
+
+.bubble.you:before {
+  left: -3px;
+  background-color: var(--chat-color-background-message-you);
+}
+
+.bubble.me {
+  float: right;
+  color: var(--chat-color-text-message-me);
+  background-color: var(--chat-color-background-message-me);
+  align-self: flex-end;
+  -webkit-animation-name: slideFromRight;
+  animation-name: slideFromRight;
+}
+
+.bubble.me:before {
+  right: -3px;
+  background-color: var(--chat-color-background-message-me);
+}
+
+/* Divider Time */
+.conversation-start {
+  position: relative;
+  width: 100%;
+  margin-bottom: 27px;
+  text-align: center;
+}
+
+.conversation-start span {
+  font-size: 14px;
+  display: inline-block;
+  color: var(--chat-color-line);
+}
+
+.conversation-start span:before,
+.conversation-start span:after {
+  position: absolute;
+  top: 10px;
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  content: "";
+  background-color: var(--chat-color-light);
+}
+
+.conversation-start span:before {
+  left: 0;
+}
+
+.conversation-start span:after {
+  right: 0;
+}
+
+
+/* Chat input text and buttonss*/
+.write {
+  display: flex;
+  position: absolute;
+  bottom: 16px;
+  left: 30px;
+  height: 42px;
+  padding-left: 8px;
+  border: 1px solid var(--chat-color-light);;
+  background-color: var(--chat-color-background-2);
+  width: calc(100% - 58px);
+  border-radius: 5px;
+}
+
+.write input {
+  font-size: 16px;
+  float: left;
+  width: 347px;
+  height: 40px;
+  padding: 0 10px;
+  color: var(--chat-color-input);
+  border: 0;
+  outline: none;
+  background-color: var(--chat-color-background-input);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+.write .write-link.attach:before {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 42px;
+  content: "";
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/attachment.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.write .write-link.smiley:before {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 42px;
+  content: "";
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/smiley.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.write .write-link.send:before {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 42px;
+  margin-left: 11px;
+  margin-right: 8px;
+  content: "";
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

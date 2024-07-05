@@ -1,0 +1,55 @@
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat Example</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="scripts/script.js"></script>
+</head>
+
+<body>
+
+	<div class="chat-window" id="chatWindow">
+		<div class="chat-header">
+			<img id="chatIcon" width="35" height="35"
+				src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fbackend.chatbase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fchatbots-profile-pictures%2F7ba1da4d-e947-4cce-9e5a-85ec139ecac6%2FPyy_eZYqu_fKH-gkhICfc.jpg%3Fwidth%3D35%26quality%3D50&w=48&q=75&dpl=dpl_8Vboo7iLBUsnfmfHGx2Nf6xLya9S"
+				style="color: transparent;">
+			<h3 id="chatTitle">Innova</h3>
+			<button class="close-btn" onclick="toggleChat()">×</button>
+		</div>
+
+		<div class="chat-body" id="chatBody">
+
+			<!-- Los mensajes del chat se agregarán aquí -->
+			<div class="conversation-start">
+				<span>Today, 5:38 PM</span>
+			</div>
+
+			<!-- messages -->
+			<div class="bubble you">
+				Hello, can you hear me?
+			</div>
+			<div class="bubble you">
+				I'm in California dreaming
+			</div>
+
+			<div class="bubble me">
+				... about who we used to be.about who we used to be.about who we used to be.about who we used to
+				be.about who we used to be.about who we used to be.about who we used to be.
+			</div>
+		</div>
+
+		<div class="write">
+			<span id="chatAttachmentBtn" class="write-link attach"></span>
+			<input id="chatInput" type="text">
+			<span id="chatEmojiBtn" class="write-link smiley"></span>
+			<span id="chatSendMessageBtn" class="write-link send"></span>
+		</div>
+	</div>
+
+
+	<button class="chat-toggle-btn" id="chatToggleBtn" onclick="toggleChat()"><img src="images/icon.svg" width="30px"></button>
+</body>
+
+</html>
