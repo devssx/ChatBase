@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Chatbase/.vs/Chatbase/FileContentIndex
+/Chatbase/Chatbase/bin
+/Chatbase/Chatbase/obj/Debug
+/Chatbase/ChatbaseApi/obj/Debug
+/Chatbase/packages
+/Chatbase/.vs/Chatbase
+/Chatbase/Chatbase/Chatbase.csproj.user

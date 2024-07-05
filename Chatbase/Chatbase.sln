@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatbase", "Chatbase\Chatbase.csproj", "{3DCE28E2-6EF5-46BA-9824-70C4CB1FFFCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatbaseApi", "ChatbaseApi\ChatbaseApi.csproj", "{DADD10B8-FBEF-4A79-8712-9D3FD8DDBF51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DCE28E2-6EF5-46BA-9824-70C4CB1FFFCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCE28E2-6EF5-46BA-9824-70C4CB1FFFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCE28E2-6EF5-46BA-9824-70C4CB1FFFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCE28E2-6EF5-46BA-9824-70C4CB1FFFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADD10B8-FBEF-4A79-8712-9D3FD8DDBF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADD10B8-FBEF-4A79-8712-9D3FD8DDBF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADD10B8-FBEF-4A79-8712-9D3FD8DDBF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADD10B8-FBEF-4A79-8712-9D3FD8DDBF51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8995C4CA-171C-4148-9B3F-1173687190D2}
+	EndGlobalSection
+EndGlobal
